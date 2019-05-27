@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: service-hystrix-dashboard
+  cloud:
+    config:
+      name: service-hystrix-dashboard-config   #文件前缀名称
+      profile: dev                  #服务环境名称
+      uri: http://localhost:8888

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: service-provider-01
+  cloud:
+    config:
+      name: service-provider-01-config   #文件前缀名称
+      profile: dev                  #服务环境名称
+      uri: http://localhost:8888

@@ -1,0 +1,32 @@
+server: 
+  port: 8010
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  application:
+    name: service-zuul-gateway
+ 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: service-zuul-gateway
+    prefer-ip-address: true
+ 
+ 
+zuul: 
+  ignored-services: "*"                 #忽略所有真实服务路径
+  routes: 
+    mydept.serviceId: service-consumer
+    mydept.path: /api/**
+ 
+info:
+  app.name: service-zuul-gateway
+  company.name: www.zhjd.com
+  build.artifactId: com.zhjd
+  build.version: 1.0
+
+
+

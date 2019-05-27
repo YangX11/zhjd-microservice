@@ -1,0 +1,21 @@
+server: 
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+
+logging:
+  level:
+    com.zhjd: DEBUG
+    org.springframework: ERROR
+  file: logs/service-config-log.log
+
+spring:
+  application:
+    name:  service-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/localhost
